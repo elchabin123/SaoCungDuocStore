@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\data\\saocungduocstoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\data\\saocungduocstoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\models\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\models\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\models\\author_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\models\\author_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\models\\bookbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\models\\bookbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\models\\producer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\models\\producer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\data\\enums\\bookcatagory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\data\\enums\\bookcatagory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|c:\\users\\admin\\desktop\\ecommerce-project\\saocungduocstore\\saocungduocstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF4C5749-08E7-4074-94F4-DA092D0D7750}|SaoCungDuocStore\\SaoCungDuocStore.csproj|solutionrelative:saocungduocstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Author_Book.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Author_Book.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Models\\Author_Book.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Author_Book.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Models\\Author_Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:49:51.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Program.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Program.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:40:38.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SaoCungDuocStoreDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Data\\SaoCungDuocStoreDbContext.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Data\\SaoCungDuocStoreDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Data\\SaoCungDuocStoreDbContext.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Data\\SaoCungDuocStoreDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:36:13.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookCatagory.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Data\\Enums\\BookCatagory.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Data\\Enums\\BookCatagory.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Data\\Enums\\BookCatagory.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Data\\Enums\\BookCatagory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:25:28.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Books.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Books.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Models\\Books.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Books.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Models\\Books.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAADwvx8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:20:19.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookBranch.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\BookBranch.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Models\\BookBranch.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\BookBranch.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Models\\BookBranch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:17:35.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Producer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Producer.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Models\\Producer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Producer.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Models\\Producer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:11:40.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Author.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Models\\Author.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Models\\Author.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Models\\Author.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:07:51.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SaoCungDuocStore\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SaoCungDuocStore\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:00:45.172Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
