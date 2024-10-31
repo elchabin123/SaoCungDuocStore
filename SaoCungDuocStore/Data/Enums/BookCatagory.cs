@@ -14,5 +14,8 @@ namespace SaoCungDuocStore.Data.Enums
         Child,
         Magazine,
         Psycology,
+        Documentary,
+        Cartoon,
+        Drama,
     }
 }

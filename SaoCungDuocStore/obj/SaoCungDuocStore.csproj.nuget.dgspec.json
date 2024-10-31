@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj": {
+    "C:\\Users\\Admin\\Desktop\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj",
         "projectName": "SaoCungDuocStore",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\SaoCungDuocStore\\SaoCungDuocStore\\SaoCungDuocStore.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Ecommerce-project\\SaoCungDuocStore\\SaoCungDuocStore\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\SaoCungDuocStore\\SaoCungDuocStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
