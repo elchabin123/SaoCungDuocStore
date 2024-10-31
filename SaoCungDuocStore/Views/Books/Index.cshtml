@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SaoCungDuocStore.Models.Books>
+
+@{
+    ViewData["Title"] = "List of ";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-xs-6 border-primary mb-3">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-info">
+                            <p class="card-text">
+                                <h5 class="card-title">
+                                    @item.Name
+                                    <a class="text-white float-right"><i class="bg-info bit-pencil-square"></i></a>
+                                </h5>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@item.Image" width="100%" alt="@item.Name">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text">@item.Description</p>
+                            <p class="card-text"><b>Chi Nhánh: </b>@item.BookBranchs.Name</p>
+                            <p class="card-text"><b>Thể Loại: </b>@item.BookCatagory</p>
+                            <p class="card-text"><b>Ngày Mở Bán: </b>@item.StartDate.ToString("dd MMM yyyy")</p>
+                            @* <p class="card-text"><b>Ngày Kết Thúc: </b>@item.EndDate</p> *@
+                            <p class="card-text ">
+                                <b>Trạng Thái: </b>
+                                @if (DateTime.Now >= item.StartDate && DateTime.Now <= item.EndDate)
+                                {
+                                    <span class="badge bg-success text-white">Sale</span>
+                                }
+                                else if (DateTime.Now > item.EndDate)
+                                {
+                                    <span class="badge bg-danger text-white">Sold</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-primary text-white">Coming</span>
+                                }
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer ">
+                            <p class="card-text">
+                                <a class="btn btn-outline-primary float-ritght"><i class="bg-info bi-eye-fill"> Chi Tiết</i></a>
+                                <a class="btn btn-success text-white">
+                                    <i class="bg-info bi-cart-plus"></i>
+                                    Thêm Vào (icon giỏ hàng) (@item.Price.ToString("C", new System.Globalization.CultureInfo("vi-VN")))
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

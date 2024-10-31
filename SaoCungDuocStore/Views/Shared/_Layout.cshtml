@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SaoCungDuocStore</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Books" asp-action="Index">SaoCungDuocStore</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,13 +20,34 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Books" asp-action="index">
+                                (icon sách) Trang Chủ
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                (icon quản lí) Quản Lí
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="BooksBranchs" asp-action="index">
+                                    (icon chi nhánh) Chi Nhánh
+                                </a>
+                                <a class="dropdown-item" asp-controller="Authors" asp-action="index">
+                                    (icon Tác giả) Tác Giả
+                                </a>
+                                <a class="dropdown-item" asp-controller="Producers" asp-action="index">
+                                    (icon nhà xuất bản) Nhà Xuất Bản
+                                </a>
+                            </div>
                         </li>
                     </ul>
+                    <form class="form-inline d-flex my-2 my-lg-0" asp-controller="Books" asp-action="Filter" style="padding-right: 25px;">
+                        <input name="searchString" type="text" class="form-control mr-2" placeholder="Tìm Kiếm Sách..." />
+                        <button class="btn btn-outline-success" type="submit">(icon kính lúp)</button>
+                    </form>
+
                 </div>
+
             </div>
         </nav>
     </header>
@@ -38,7 +59,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - SaoCungDuocStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - SaoCungDuocStore 
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaoCungDuocStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57297fa98407cd337a75e646e007932aa1cd48f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cd5019953d4e1084bfd13bc6a53cd046e2c6536")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaoCungDuocStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaoCungDuocStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

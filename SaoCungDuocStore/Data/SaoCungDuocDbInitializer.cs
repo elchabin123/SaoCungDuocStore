@@ -13,37 +13,38 @@ namespace SaoCungDuocStore.Data
                 context.Database.EnsureCreated();
 
                 //BooksBranches
-                if (!context.BookBranches.Any()) {
+                if (!context.BookBranches.Any())
+                {
                     context.BookBranches.AddRange(new List<BookBranch>()
                     {
                         new BookBranch()
                         {
                             Name = "Cinema 1",
-                           
+
                             Description = "This is the description of the first cinema"
                         },
                         new BookBranch()
                         {
                             Name = "Cinema 2",
-                            
+
                             Description = "This is the description of the first cinema"
                         },
                         new BookBranch()
                         {
                             Name = "Cinema 3",
-                           
+
                             Description = "This is the description of the first cinema"
                         },
                         new BookBranch()
                         {
                             Name = "Cinema 4",
-                            
+
                             Description = "This is the description of the first cinema"
                         },
                         new BookBranch()
                         {
                             Name = "Cinema 5",
-                            
+
                             Description = "This is the description of the first cinema"
                         },
                     }
