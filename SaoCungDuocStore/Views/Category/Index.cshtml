@@ -1,0 +1,40 @@
+﻿@model List<Category>
+
+<div class="container">
+    <div class="row pt-4" pb-3>
+        <div class="col-6">
+            <h2>Danh Sách Thể Loại</h2>
+    </div>
+    <div class="col-6 text-end">
+        <a asp-controller="Category" asp-action="Create" class="btn btn-primary">(icon dấu Cộng) Tạo Mới </a>
+    </div>
+    </div>
+
+<table class="table table-bordered table-striped">
+    <thead>   
+    <tr>
+        <th>
+                Thể Loại
+        </th>
+        <th>
+                Thứ Tự 
+        </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model.OrderBy(u=>u.DisplayOrder))
+        {
+        <tr>
+            <td>@obj.Name</td>
+            <td>@obj.DisplayOrder</td>
+            <td class="w-75 btn-group" role="group" class="btn btn-primary mx-2">
+                        <a asp-controller="Category" asp-action="Edit" asp-route-categoryId="@obj.CategoryId">(icon edit) Edit</a>
+            </td>
+            <td class="w-75 btn-group" role="group" class="btn btn-primary mx-2">
+                        <a asp-controller="Category" asp-action="Delete" asp-route-categoryId="@obj.CategoryId">(icon Delet) Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+</div>
