@@ -5,7 +5,7 @@ namespace SaoCungDuocStore.Models
 {
     public class Category
     {
-        internal object id;
+        
 
         [Key]
         public int CategoryId { get; set; }
