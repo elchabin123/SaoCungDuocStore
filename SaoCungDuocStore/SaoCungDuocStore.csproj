@@ -32,4 +32,8 @@
     <ProjectReference Include="..\SaoCungDuocStore.Models\SaoCungDuocStore.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\Product\" />
+  </ItemGroup>
+
 </Project>

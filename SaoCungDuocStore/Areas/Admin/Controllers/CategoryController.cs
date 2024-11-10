@@ -45,13 +45,13 @@ namespace SaoCungDuocStore.Controllers
 
         }
 
-        public IActionResult Edit(int? id)
+        public IActionResult Edit(int? CategoryId)
         {
-            if (id == null || id == 0)
+            if (CategoryId == null || CategoryId == 0)
             {
                 return NotFound();
             }
-            Category? categoryFromDb = _unitOfWork.Category.Get(u => u.CategoryId == id);
+            Category? categoryFromDb = _unitOfWork.Category.Get(u => u.CategoryId == CategoryId);
             //Category? categoryFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id==id);
             //Category? categoryFromDb2 = _db.Categories.Where(u=>u.Id==id).FirstOrDefault();
 
@@ -62,6 +62,7 @@ namespace SaoCungDuocStore.Controllers
             return View(categoryFromDb);
         }
         [HttpPost]
+
         public IActionResult Edit(Category obj)
         {
             if (ModelState.IsValid)
@@ -75,13 +76,13 @@ namespace SaoCungDuocStore.Controllers
 
         }
 
-        public IActionResult Delete(int? id)
+        public IActionResult Delete(int? CategoryId)
         {
-            if (id == null || id == 0)
+            if (CategoryId == null || CategoryId == 0)
             {
                 return NotFound();
             }
-            Category? categoryFromDb = _unitOfWork.Category.Get(u => u.CategoryId == id);
+            Category? categoryFromDb = _unitOfWork.Category.Get(u => u.CategoryId == CategoryId);
 
             if (categoryFromDb == null)
             {
@@ -90,9 +91,11 @@ namespace SaoCungDuocStore.Controllers
             return View(categoryFromDb);
         }
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int? id)
+        
+
+        public IActionResult DeletePOST(int? CategoryId)
         {
-            Category? obj = _unitOfWork.Category.Get(u => u.CategoryId == id);
+            Category? obj = _unitOfWork.Category.Get(u => u.CategoryId == CategoryId);
             if (obj == null)
             {
                 return NotFound();

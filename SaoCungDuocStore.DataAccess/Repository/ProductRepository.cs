@@ -32,8 +32,13 @@ namespace SaoCungDuocStore.DataAccess.Repository
                 objFromDb.ListPrice = obj.ListPrice;
                 objFromDb.Price100 = obj.Price100;
                 objFromDb.Description = obj.Description;
-                
-               
+                objFromDb.CategoryID = obj.CategoryID;
+                objFromDb.Author = obj.Author;
+                if (obj.ImageURL != null)
+                {
+                    obj.ImageURL = obj.ImageURL;
+                }
+
             }
         }
     }
