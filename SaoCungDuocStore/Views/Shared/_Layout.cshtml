@@ -33,27 +33,27 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Content Managment
                             </a>
-                            @if(User.IsInRole(SD.Role_Admin)){
+                            @* @if(User.IsInRole(SD.Role_Admin)){ *@
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Thể Loại</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Sản Phẩm</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Công Ty</a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a>
+                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Tạo Người Dùng</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Manage User</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Quản Lí Người Dùng</a>
                                 </li>
 
                             </ul>
-                            }
+                           @*  } *@
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

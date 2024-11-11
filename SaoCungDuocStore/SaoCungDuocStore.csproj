@@ -39,4 +39,9 @@
     <Folder Include="wwwroot\Images\Product\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Company\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Company\Upsert.cshtml" />
+  </ItemGroup>
+
 </Project>
