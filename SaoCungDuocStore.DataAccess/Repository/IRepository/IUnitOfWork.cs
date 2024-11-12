@@ -13,11 +13,12 @@ namespace SaoCungDuocStore.DataAccess.Repository.IRepository
         ICompanyRepository Company { get; }
         IShoppingCartRepository ShoppingCart { get; }
         IApplicationUserRepository ApplicationUser { get; }
+        IOrderDetailRepository OrderDetail { get; }
+        IOrderHeaderRepository OrderHeader { get; }
         /*
           
           
-          IOrderDetailRepository OrderDetail { get; }
-          IOrderHeaderRepository OrderHeader { get; }
+         
           IProductImageRepository ProductImage { get; }*/
         void Save();
     }
