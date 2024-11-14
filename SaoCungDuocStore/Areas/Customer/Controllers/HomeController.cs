@@ -2,9 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using SaoCungDuocStore.DataAccess.Repository.IRepository;
 using SaoCungDuocStore.Models;
-using SaoCungDuocStore.Utility;
 using System.Diagnostics;
 using System.Security.Claims;
+using SaoCungDuocStore.Utility;
+using Microsoft.AspNetCore.Http;
 
 namespace SaoCungDuocStore.Areas.Customer.Controllers
 {
@@ -55,18 +56,16 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
                 //add cart record
                 _unitOfWork.ShoppingCart.Add(shoppingCart);
                 _unitOfWork.Save();
-              /*  HttpContext.Session.SetInt32(SD.SessionCart,
-                _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId).Count());*/
+                HttpContext.Session.SetInt32(SD.SessionCart,
+                _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId).Count());
+                
             }
             TempData["success"] = "Cập Nhật Giỏ Hàng Thành Công";
-
-
-
-
             return RedirectToAction(nameof(Index));
         }
         public IActionResult Index()
         {
+           
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category");
             return View(productList);
         }

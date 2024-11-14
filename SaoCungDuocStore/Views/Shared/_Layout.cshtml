@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -27,38 +30,39 @@
                         </li>
                        
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Quản Lí Đơn Hàng</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Đơn Hàng</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Quản Lí
-                            </a>
-                            @* @if(User.IsInRole(SD.Role_Admin)){ *@
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Thể Loại</a>
+                        
+                             @if (User.IsInRole(SD.Role_Admin))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Quản Lí
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Tạo Tài Khoản</a>
+                                    </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Sản Phẩm</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Công Ty</a>
-                                </li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Tạo Người Dùng</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Quản Lí Người Dùng</a>
-                                </li>
-
-                            </ul>
-                           @*  } *@
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
-                                <i class="bi bi-cart"> (0)</i> &nbsp;
-                            </a>
-                        </li>
+                            }
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                                    @await Component.InvokeAsync("ShoppingCart")
+                                </a>
+                            </li>
+                        
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

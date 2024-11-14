@@ -8,8 +8,8 @@ using System.Diagnostics;
 namespace SaoCungDuocStore.Controllers
 {
     [Area("Admin")]
-/*    [Authorize(Roles = SD.Role_Admin)]
-*/    public class CategoryController : Controller
+   [Authorize(Roles = SD.Role_Admin)]
+    public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         public CategoryController(IUnitOfWork unitOfWork)
