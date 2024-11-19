@@ -34,10 +34,11 @@ namespace SaoCungDuocStore.DataAccess.Repository
                 objFromDb.Description = obj.Description;
                 objFromDb.CategoryID = obj.CategoryID;
                 objFromDb.Author = obj.Author;
-                if (obj.ImageURL != null)
+                objFromDb.ProductImages = obj.ProductImages;
+                /*if (obj.ImageURL != null)
                 {
                     obj.ImageURL = obj.ImageURL;
-                }
+                }*/
 
             }
         }
