@@ -1,4 +1,4 @@
-(function($) {
+﻿(function($) {
 
   "use strict";
 
@@ -21,14 +21,16 @@
 		})
 	}
 
-  var initSwiper = function() {
-
     var swiper = new Swiper(".main-swiper", {
-      speed: 500,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+  
+
+        // Tự động chuyển slide sau 2 giây
+        
+        // ... các cấu hình khác của Swiper ...
+        autoplay: {
+            delay: 2000, // 2 giây giữa các slide
+            disableOnInteraction: false // Tiếp tục tự động chạy khi người dùng tương tác
+        }
     });
 
     var category_swiper = new Swiper(".category-carousel", {
@@ -55,29 +57,13 @@
       }
     });
 
-    var brand_swiper = new Swiper(".brand-carousel", {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      speed: 500,
-      navigation: {
-        nextEl: ".brand-carousel-next",
-        prevEl: ".brand-carousel-prev",
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        991: {
-          slidesPerView: 3,
-        },
-        1500: {
-          slidesPerView: 4,
-        },
-      }
-    });
+      var mainSwiper = new Swiper(".main-swiper", {
+          // ... other configuration options ...
+          autoplay: {
+              delay: 2000, // 2 seconds delay between slides
+              disableOnInteraction: false // Keep autoplay even when user interacts
+          }
+      });
 
     var products_swiper = new Swiper(".products-carousel", {
       slidesPerView: 5,
