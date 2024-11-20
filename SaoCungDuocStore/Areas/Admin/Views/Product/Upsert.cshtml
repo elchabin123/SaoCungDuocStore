@@ -4,7 +4,7 @@
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2"> @(Model.Product.Id != 0 ? "Update" : "Create") Product</h2>
+                <h2 class="text-white py-2"> @(Model.Product.Id != 0 ? "Sửa" : "Tạo") Sản Phẩm</h2>
             </div>
         </div>
     </div>
@@ -18,11 +18,11 @@
                         @*<div asp-validation-summary="ModelOnly"></div>*@
                         <div class="form-floating py-2 col-12">
                             <input asp-for="Product.Title" class="form-control border-0 shadow" />
-                            <label asp-for="Product.Title" class="ms-2"></label>
+                            <label asp-for="Product.Title" class="ms-2">Tiêu đề</label>
                             <span asp-validation-for="Product.Title" class="text-danger"></span>
                         </div>
                         <div class="py-2 col-12">
-                            <label asp-for="Product.Description" class="ms-2 text-muted"></label>
+                            <label asp-for="Product.Description" class="ms-2 text-muted">Sự miêu tả</label>
                             <textarea asp-for="Product.Description" class="form-control border-0 shadow"></textarea>
                         </div>
 
@@ -33,29 +33,29 @@
                         </div>
                         <div class="form-floating py-2 col-12">
                             <input asp-for="Product.Author" class="form-control border-0 shadow" />
-                            <label asp-for="Product.Author" class="ms-2"></label>
+                            <label asp-for="Product.Author" class="ms-2">Tác Giả</label>
                             <span asp-validation-for="Product.Author" class="text-danger"></span>
                         </div>
                         <div class="form-floating py-2 col-12">
                             <input asp-for="Product.ListPrice" class="form-control border-0 shadow" />
-                            <label asp-for="Product.ListPrice" class="ms-2"></label>
+                            <label asp-for="Product.ListPrice" class="ms-2">Giá niêm yết</label>
                             <span asp-validation-for="Product.ListPrice" class="text-danger"></span>
                         </div>
                         <div class="form-floating py-2 col-12">
                             <input asp-for="Product.Price" class="form-control border-0 shadow" />
-                            <label asp-for="Product.Price" class="ms-2"></label>
+                            <label asp-for="Product.Price" class="ms-2">Giá Cho 1-50</label>
                             <span asp-validation-for="Product.Price" class="text-danger"></span>
                         </div>
 
                         <div class="form-floating py-2 col-12">
                             <input asp-for="Product.Price50" class="form-control border-0 shadow" />
-                            <label asp-for="Product.Price50" class="ms-2"></label>
+                            <label asp-for="Product.Price50" class="ms-2">Giá Cho 50+</label>
                             <span asp-validation-for="Product.Price50" class="text-danger"></span>
                         </div>
 
                         <div class="form-floating py-2 col-12">
                             <input asp-for="Product.Price100" class="form-control border-0 shadow" />
-                            <label asp-for="Product.Price100" class="ms-2"></label>
+                            <label asp-for="Product.Price100" class="ms-2">Giá Cho 100+</label>
                             <span asp-validation-for="Product.Price100" class="text-danger"></span>
                         </div>
 
@@ -63,7 +63,7 @@
                             <select asp-for="@Model.Product.CategoryID" asp-items="@Model.CategoryList" class="form-select border-0 shadow">
                                 <option disabled selected>--Select Category--</option>
                             </select>
-                            <label asp-for="Product.CategoryID" class="ms-2"></label>
+                            <label asp-for="Product.CategoryID" class="ms-2">Mã Danh Mục</label>
                             <span asp-validation-for="Product.CategoryID" class="text-danger"></span>
                         </div>
                         <div class="form-floating py-2 col-12">
@@ -78,12 +78,12 @@
                                 }
                                 else
                                 {
-                                    <button type="submit" class="btn btn-primary form-control">Create</button>
+                                    <button type="submit" class="btn btn-primary form-control">Tạo</button>
                                 }
                             </div>
                             <div class="col-6 col-md-3">
                                 <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary border  form-control">
-                                    Back to List
+                                    Quay lại danh sách
                                 </a>
                             </div>
                         </div>
