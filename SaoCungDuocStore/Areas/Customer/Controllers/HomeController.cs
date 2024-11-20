@@ -63,10 +63,20 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             TempData["success"] = "Cập Nhật Giỏ Hàng Thành Công";
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Index()
+        public IActionResult Index(int? categoryId)
         {
 
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,ProductImages");
+            if (categoryId.HasValue)
+            {
+                // Lọc sản phẩm theo CategoryId
+                productList = _unitOfWork.Product.GetAll(p => p.CategoryID == categoryId, includeProperties: "Category");
+            }
+            else
+            {
+                // Nếu không có categoryId, lấy tất cả sản phẩm
+                productList = _unitOfWork.Product.GetAll(includeProperties: "Category");
+            }
             return View(productList);
         }
 
