@@ -17,139 +17,85 @@
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
 
+        .mySlides {
+            display: none;
+        }
 
+        .w3-left, .w3-right, .w3-badge {
+            cursor: pointer;
+        }
+
+        .w3-badge {
+            height: 10px;
+            width: 20px;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
-
-
-    <section class="py-3" style="background-image: url('images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="banner-blocks">
-
-                        <div class="banner-ad large bg-info block-1">
-
-                            <div class="swiper main-swiper">
-                                <div class="swiper-wrapper">
-                                    @* ---QC kéo--- *@
-
-                                    <div class="swiper-slide">
-                                        <div class="row banner-content p-5">
-                                            <div class="content-wrapper col-md-7">
-
-                                                <h3 class="display-4">Khuyến mãi Giáng Sinh</h3>
-                                                <p>Noel và những điều thú vị.</p>
-                                                <a asp-action="Details"
-                                                   asp-route-productId=3 class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">XEM NGAY</a>
-                                            </div>
-                                            <div class="img-wrapper col-md-5">
-                                                <img src="~/images/product/b9b228e6-d032-428b-a78b-1a6c7716a7fb.jpg" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="row banner-content p-5">
-                                            <div class="content-wrapper col-md-7">
-
-                                                <h3 class="banner-title">Đêm kinh hoàng</h3>
-                                                <p>Bí ẩn của mùa Giáng Sinh.</p>
-                                                <a asp-action="Details"
-                                                   asp-route-productId=4 class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">XEM NGAY</a>
-                                            </div>
-                                            <div class="img-wrapper col-md-5">
-                                                <img src="~/images/product/8e8cd412-7084-4778-a75c-a6c8034f1610.png" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="row banner-content p-5">
-                                            <div class="content-wrapper col-md-7">
-
-                                                <h3 class="banner-title">Đem sách về cho mẹ</h3>
-                                                <p>Đi một ngày đàn học một sàn khôn.</p>
-                                                <a asp-action="Details"
-                                                   asp-route-productId=5 class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">XEM NGAY</a>
-                                            </div>
-                                            <div class="img-wrapper col-md-5">
-                                                <img src="~/images/product/f54f7d1f-58ea-46e2-b88e-7ce1bf8cf038.png" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-pagination"></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="main" style="margin-top: 10px; display: flex;">
+        <!-- Phần slider ở bên trái -->
+        <div class="w3-content w3-display-container" style="width: 100%; height: 770px; object-fit: cover;" ; flex-grow: 1;">
+            <img class="mySlides" src="~/Images/anh1.jpg" style="width: 100%; height: 770px; object-fit: cover;" alt="Slide 1" style="width:100%">
+            <img class="mySlides" src="~/Images/anh2.jpg" style="width: 100%; height: 770px; object-fit: cover;" alt="Slide 2" style="width:100%">
+            <img class="mySlides" src="~/Images/anh3.jpg" style="width: 100%; height: 770px; object-fit: cover;" alt="Slide 3" style="width:100%">
+            <img class="mySlides" src="~/Images/anh4.jpg" style="width: 100%; height: 770px; object-fit: cover;" alt="Slide 4" style="width:100%">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
             </div>
         </div>
-    </section>
+
+
+
+        <!-- Phần hình ảnh và liên kết bên phải -->
+        <div class="right-images" style="display: flex; flex-direction: column; margin-left: 20px;">
+            <a class="w3-button w3-yellow" asp-action="Index" asp-route-categoryId=4 style="display: inline-block; text-align: center; border-radius: 10px; border: 3px solid green;margin-bottom: 20px;">
+                <img src="~/Images/anh1.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Hình ảnh 1" style="width: 200px; margin-bottom: 10px; display: block;">
+                <span style="display: block; font-size: 20px; font-weight: bold;">Sách Mới</span>
+            </a>
+            <a class="w3-button w3-red" asp-action="Index" asp-route-categoryId=2 style="display: inline-block; text-align: center; border-radius: 10px; border: 3px solid green;margin-bottom: 20px;">
+                <img src="~/Images/anh2.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Hình ảnh 2" style="width: 200px; margin-bottom: 10px; display: block;">
+                <span style="display: block; font-size: 20px; font-weight: bold;">Bán Chạy</span>
+            </a>
+            <a class="w3-button w3-blue" asp-action="Index" asp-route-categoryId=5 style="display: inline-block; text-align: center; border-radius: 10px; border: 3px solid green;">
+                <img src="~/Images/anh3.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Hình ảnh 3" style="width: 200px; margin-bottom: 10px; display: block;">
+                <span style="display: block; font-size: 20px; font-weight: bold;">Giảm Giá</span>
+            </a>
+        </div>
+
+
+    </div>
+
+   
 
     <section class="py-5 overflow-hidden">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="section-header d-flex flex-wrap justify-content-between mb-5">
-                        <h2 class="section-title">Thể loại</h2>
-                        @* ---button kéo--- *@
-                        <div class="d-flex align-items-center">
-                            <a href="#" class="btn-link text-decoration-none">Tất cả →</a>
-                            <div class="swiper-buttons">
-                                <button class="swiper-prev products-carousel-prev btn btn-primary">❮</button>
-                                <button class="swiper-prev products-carousel-next btn btn-primary">❯</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col-md-12">
                     @*  ---category--- *@
                     <div class="category-carousel swiper">
                         <div class="swiper-wrapper">
-
-                            <a asp-action="Index" asp-route-categoryId="3" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Trinh Thám</h3>
-                            </a>
-                            <a asp-action="Index" asp-route-categoryId="2" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Kinh Dị</h3>
-                            </a>
-                            <a asp-action="Index" asp-route-categoryId="1" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Cổ Tích</h3>
-                            </a>
-                            <a asp-action="Index" asp-route-categoryId="8" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Tâm Lí</h3>
-                            </a>
-                            <a asp-action="Index" asp-route-categoryId="7" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Khoa Học</h3>
-                            </a>
-                            <a asp-action="Index" asp-route-categoryId="6" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Nấu Ăn</h3>
-                            </a>
-                            <a asp-action="Index" asp-route-categoryId="5" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Thiếu Nhi</h3>
-                            </a>
-                            <a asp-action="Index" asp-route-categoryId="4" class="nav-link category-item swiper-slide">
-
-                                <h3 class="category-title">Anime</h3>
-                            </a>
-
+                            <a class="w3-button w3-blue"><h2>Thể Loại</h2></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=1><h3>Cổ Tích</h3></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=2><h3>Kinh Dị</h3></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=3><h3>Trinh Thám</h3></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=4><h3>Anime</h3></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=5><h3>Thiếu Nhi</h3></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=6><h3>Nấu Ăn</h3></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=7><h3>Khoa Học</h3></a>
+                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=8><h3>Tâm Lí</h3></a>
 
                         </div>
                     </div>
@@ -184,35 +130,31 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <div class="brand-carousel swiper">
-                        <div class="swiper-wrapper">
-                            @foreach (var product in Model)
-                            {
-                                <div class="swiper-slide">
-                                    <div class="card mb-3 p-3 rounded-4 shadow border-0">
-                                        <div class="row g-0">
-                                            <div class="col-md-4">
-                                                @if (product.ProductImages != null && product.ProductImages.Count() > 0)
-                                                {
-@*                                                     <img src="~/Images/product/@product.ProductImages.FirstOrDefault().ImageUrl" class="card-img-top rounded" />
- *@                                                }
-                                                else
-                                                {
-                                                    <img src="https://placehold.co/500x600/png" class="card-img-top rounded" />
-                                                }
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body py-0">
-                                                    <p class="text-muted mb-0">@product.Author</p>
-
-                                                </div>
-                                            </div>
+                    <div class="row pb-3">
+                        @foreach (var product in Model)
+                        {
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="row p-2">
+                                    <div class="col-12 p-1">
+                                        <div class="card border-0 p-3 shadow  border-top border-5 rounded">
+                                            @if (product.ProductImages != null && product.ProductImages.Count() > 0)
+                                            {
+                                                <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                            }
+                                            else
+                                            {
+                                                <img src="https://placehold.co/500x600/png" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                            }
+                                            <div class="card-body pb-0">
+                                                <div class="pl-1">
+                                                    <p class="card-title text-warning text-center"><h3>@product.Author</h3></p>
+                                                </div>                                              
+                                            </div>                                        
                                         </div>
                                     </div>
                                 </div>
-                            }
-
-                        </div>
+                            </div>
+                        }
                     </div>
 
                 </div>
@@ -360,14 +302,14 @@
                                         <div class="row p-2">
                                             <div class="col-12 p-1">
                                                 <div class="card border-0 p-3 shadow  border-top border-5 rounded">
-                                                    @if (product.ProductImages != null && product.ProductImages.Count() > 0)
-                                                    {
-                                                        <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
-                                                    }
+                                                    @* @if (product.ProductImages != null && product.ProductImages.Count() > 0)
+                                                    { *@
+                                                        <img src="~/Images/@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                                    @* }
                                                     else
                                                     {
                                                         <img src="https://placehold.co/500x600/png" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
-                                                    }
+                                                    } *@
                                                     <div class="card-body pb-0">
                                                         <div class="pl-1">
                                                             <p class="card-title h5 text-dark opacity-75 text-uppercase text-center">@product.Title</p>
@@ -462,7 +404,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="~/images/product/41ba8176-a85b-40cc-80de-d7605bff3526.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="phone" class="image-float img-fluid">
+                            <img src="~/images/product/41ba8176-a85b-40cc-80de-d7605bff3526.jpg" style="width: 100%; height: 700px; object-fit: cover;" alt="phone" class="image-float img-fluid">
                         </div>
                         <div class="col-md-8">
                             <h2 class="my-5">Thiên đường tri thức</h2>
@@ -574,7 +516,7 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer-menu">
-                        <img src="~/images/book.png" style="width: 100%; height: 200px; object-fit: cover;"  alt="logo">
+                        <img src="~/images/book.png" style="width: 100%; height: 100px; object-fit: cover;"  alt="logo">
                         <div class="social-links mt-5">
                             <ul class="d-flex list-unstyled gap-2">
                                 <li>
@@ -653,9 +595,47 @@
         </div>
     </footer>
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //khởi tạo giá trị bằng 1
+        let slideIndex = 1;
+        showDivs(slideIndex);
 
+        //số slide cần chuyển
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        //cụ thể là n
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
 
-    <script src="js/jquery-1.11.0.min.js"></script>
+        //Cập nhật chấm tròn
+        function showDivs(n) {
+            const x = document.getElementsByClassName("mySlides");
+
+            const dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (let i = 0; i
+                < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+
+        }
+
+        // Tự động chuyển slide sau 2 giây
+        let autoSlideInterval = setInterval(function () {
+            plusDivs(1);
+        }, 2000);
+        </script>
+
+   
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
