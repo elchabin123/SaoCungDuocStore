@@ -130,31 +130,7 @@
             <div class="row">
                 <div class="col-md-12">
 
-<<<<<<< HEAD
-                    <div class="brand-carousel swiper">
-                        <div class="swiper-wrapper">
-                            @foreach (var product in Model)
-                            {
-                                <div class="swiper-slide">
-                                    <div class="card mb-3 p-3 rounded-4 shadow border-0">
-                                        <div class="row g-0">
-                                            <div class="col-md-4">
-                                                @if (product.ProductImages != null && product.ProductImages.Count() > 0)
-                                                {
-                                                    <img src="~/Images/product/@product.ProductImages.FirstOrDefault().ImageUrl" class="card-img-top rounded" />
-                                                }
-                                                else
-                                                {
-                                                    <img src="https://placehold.co/500x600/png" class="card-img-top rounded" />
-                                                }
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body py-0">
-                                                    <p class="text-muted mb-0">@product.Author</p>
 
-                                                </div>
-                                            </div>
-=======
                     <div class="row pb-3">
                         @foreach (var product in Model)
                         {
@@ -175,7 +151,6 @@
                                                     <p class="card-title text-warning text-center"><h3>@product.Author</h3></p>
                                                 </div>                                              
                                             </div>                                        
->>>>>>> c2b3e1e1b20dc7cf29649402af70d3007d576dcf
                                         </div>
                                     </div>
                                 </div>
@@ -328,7 +303,6 @@
                                         <div class="row p-2">
                                             <div class="col-12 p-1">
                                                 <div class="card border-0 p-3 shadow  border-top border-5 rounded">
-<<<<<<< HEAD
                                                     @if (product.ProductImages != null && product.ProductImages.Count() > 0)
                                                     {
                                                         <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
@@ -337,16 +311,7 @@
                                                     {
                                                         <img src="https://placehold.co/500x600/png" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
                                                     }
-=======
-                                                    @* @if (product.ProductImages != null && product.ProductImages.Count() > 0)
-                                                    { *@
-                                                        <img src="~/Images/@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
-                                                    @* }
-                                                    else
-                                                    {
-                                                        <img src="https://placehold.co/500x600/png" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
-                                                    } *@
->>>>>>> c2b3e1e1b20dc7cf29649402af70d3007d576dcf
+
                                                     <div class="card-body pb-0">
                                                         <div class="pl-1">
                                                             <p class="card-title h5 text-dark opacity-75 text-uppercase text-center">@product.Title</p>
