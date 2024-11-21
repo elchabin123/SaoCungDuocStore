@@ -26,7 +26,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
 
             ShoppingCart cart = new ShoppingCart()
             {
-                Product = _unitOfWork.Product.Get(u => u.Id == productId, includeProperties: "Category"),
+                Product = _unitOfWork.Product.Get(u => u.Id == productId, includeProperties: "Category,ProductImages"),
                 Count = 1,
                 ProductId = productId
             };

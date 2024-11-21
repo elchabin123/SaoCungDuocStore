@@ -194,8 +194,8 @@
                                             <div class="col-md-4">
                                                 @if (product.ProductImages != null && product.ProductImages.Count() > 0)
                                                 {
-@*                                                     <img src="~/Images/product/@product.ProductImages.FirstOrDefault().ImageUrl" class="card-img-top rounded" />
- *@                                                }
+                                                    <img src="~/Images/product/@product.ProductImages.FirstOrDefault().ImageUrl" class="card-img-top rounded" />
+                                                }
                                                 else
                                                 {
                                                     <img src="https://placehold.co/500x600/png" class="card-img-top rounded" />
@@ -246,11 +246,11 @@
                                             <div class="card border-0 p-3 shadow  border-top border-5 rounded">
                                                 @if (product.ProductImages != null && product.ProductImages.Count() > 0)
                                                 {
-                                                    <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                                    <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
                                                 }
                                                 else
                                                 {
-                                                    <img src="https://placehold.co/500x600/png" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                                    <img src="https://placehold.co/500x600/png" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
                                                 }
                                                 <div class="card-body pb-0">
                                                     <div class="pl-1">
@@ -362,11 +362,11 @@
                                                 <div class="card border-0 p-3 shadow  border-top border-5 rounded">
                                                     @if (product.ProductImages != null && product.ProductImages.Count() > 0)
                                                     {
-                                                        <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                                        <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
                                                     }
                                                     else
                                                     {
-                                                        <img src="https://placehold.co/500x600/png" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                                        <img src="https://placehold.co/500x600/png" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
                                                     }
                                                     <div class="card-body pb-0">
                                                         <div class="pl-1">

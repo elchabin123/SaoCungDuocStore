@@ -110,7 +110,7 @@ namespace SaoCungDuocStore.Controllers
                 }
 
 
-                TempData["success"] = "Product created/updated successfully";
+                TempData["success"] = "Thay Đổi Sản Phẩm Thành Công";
                 return RedirectToAction("Index");
             }
             else
@@ -170,7 +170,7 @@ namespace SaoCungDuocStore.Controllers
             var productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
             if (productToBeDeleted == null)
             {
-                return Json(new { success = false, message = "Error while deleting" });
+                return Json(new { success = false, message = "Xảy Ra Lỗi Khi Xoá" });
             }
 
             string productPath = @"images\products\product-" + id;
@@ -191,7 +191,7 @@ namespace SaoCungDuocStore.Controllers
             _unitOfWork.Product.Remove(productToBeDeleted);
             _unitOfWork.Save();
 
-            return Json(new { success = true, message = "Delete Successful" });
+            return Json(new { success = true, message = "Xoá Thành Công" });
         }
         #endregion
     }

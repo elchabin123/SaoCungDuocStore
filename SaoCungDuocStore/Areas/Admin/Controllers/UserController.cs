@@ -17,8 +17,8 @@ namespace SaoCungDuocStore.Areas.Admin.Controllers
     [Authorize(Roles = SD.Role_Admin)]
     public class UserController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly IUnitOfWork _unitOfWork;
         public UserController(UserManager<IdentityUser> userManager, IUnitOfWork unitOfWork, RoleManager<IdentityRole> roleManager)
         {
@@ -31,7 +31,7 @@ namespace SaoCungDuocStore.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult RoleManagment(string userId)
+        public IActionResult RoleManagement(string userId)
         {
 
             RoleManagmentVM RoleVM = new RoleManagmentVM()
@@ -128,7 +128,7 @@ namespace SaoCungDuocStore.Areas.Admin.Controllers
             var objFromDb = _unitOfWork.ApplicationUser.Get(u => u.Id == id);
             if (objFromDb == null)
             {
-                return Json(new { success = false, message = "Error while Locking/Unlocking" });
+                return Json(new { success = false, message = "Xảy Ra Lỗi Khi Locking/Unlocking" });
             }
 
             if (objFromDb.LockoutEnd != null && objFromDb.LockoutEnd > DateTime.Now)
@@ -142,7 +142,7 @@ namespace SaoCungDuocStore.Areas.Admin.Controllers
             }
             _unitOfWork.ApplicationUser.Update(objFromDb);
             _unitOfWork.Save();
-            return Json(new { success = true, message = "Operation Successful" });
+            return Json(new { success = true, message = "Thực Hiện Thành Công" });
         }
 
         #endregion
