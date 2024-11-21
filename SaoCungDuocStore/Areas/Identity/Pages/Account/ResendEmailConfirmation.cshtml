@@ -1,26 +1,41 @@
 ﻿@page
 @model ResendEmailConfirmationModel
 @{
-    ViewData["Title"] = "Resend email confirmation";
+    ViewData["Title"] = "Gửi lại email xác nhận";
 }
 
-<h1>@ViewData["Title"]</h1>
-<h2>Enter your email.</h2>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="All" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email" class="form-label"></label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient py-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="py-2 text-white">Gửi lại email xác nhận</h2>
             </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Resend</button>
-        </form>
+        </div>
     </div>
-</div>
+    <div class="card-body p-4">
+        <div class="row pt-3">
+            <div class="col-md-12">
+                <form id="resendConfirmationForm" class="row" method="post">
+                    <h3 class="border-bottom pb-3 mb-4 text-secondary text-center">Nhập email của bạn</h3>
+                    <div asp-validation-summary="All" class="text-danger" role="alert"></div>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+                    <div class="form-floating mb-3 col-md-12">
+                        <input asp-for="Input.Email" class="form-control" aria-required="true" placeholder="name@example.com" />
+                        <label asp-for="Input.Email" class="ms-2 text-muted">Email</label>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="w-100 btn btn-lg btn-primary">Gửi lại email</button>
+                    </div>
+
+                    <!-- Thông báo bảo mật -->
+                    <div class="col-12 text-center text-muted mt-3">
+                        <small>Email xác nhận sẽ được gửi nếu email của bạn đã được đăng ký.</small>
+                    </div>
+                </form>
+            </div>
+
+            @section Scripts {
+                <partial name="_ValidationScriptsPartial" />
+            }
