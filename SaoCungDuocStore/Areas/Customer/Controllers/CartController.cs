@@ -131,8 +131,8 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
                     {
                         PriceData = new SessionLineItemPriceDataOptions
                         {
-                            UnitAmount = (long)(item.Price * 100), // $20.50 => 2050
-                            Currency = "usd",
+                            UnitAmount = (long)(item.Price * 1000), // $20.50 => 2050
+                            Currency = "VND",
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
                                 Name = item.Product.Title
