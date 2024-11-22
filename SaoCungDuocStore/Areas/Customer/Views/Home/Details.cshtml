@@ -67,7 +67,7 @@
                             <h6 class="text-dark text-opacity-50  pb-2">
                                 Giá Gốc:
                                 <span class="text-decoration-line-through">
-                                    @Model.Product.ListPrice
+                                    @Model.Product.ListPrice.ToString(".000")VND
                                 </span>
                             </h6>
                         </div>
@@ -90,13 +90,13 @@
                                 <div>Giá</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                                <div>@Model.Product.Price.ToString("c")</div>
+                                <div>@Model.Product.Price.ToString(".000")VND</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                                <div>@Model.Product.Price50.ToString("c")</div>
+                                <div>@Model.Product.Price50.ToString(".000")VND</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                                <div>@Model.Product.Price100.ToString("c")</div>
+                                <div>@Model.Product.Price100.ToString(".000")VND</div>
                             </div>
                         </div>
                         <div class="row pl-2 my-3">
