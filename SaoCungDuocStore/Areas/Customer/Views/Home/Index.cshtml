@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FoodMart - Free eCommerce Grocery Store HTML Website Template</title>
+    <title>Trang chủ - Bookstore GI2</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +39,15 @@
     </style>
 </head>
 <body>
+    <a class="w3-button w3-blue"><h2>Thể Loại</h2></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=1><h3>Cổ Tích</h3></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=2><h3>Kinh Dị</h3></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=3><h3>Trinh Thám</h3></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=4><h3>Anime</h3></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=5><h3>Thiếu Nhi</h3></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=6><h3>Nấu Ăn</h3></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=7><h3>Khoa Học</h3></a>
+    <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=8><h3>Tâm Lí</h3></a>
     <div class="main" style="margin-top: 10px; display: flex;">
         <!-- Phần slider ở bên trái -->
         <div class="w3-content w3-display-container" style="width: 100%; height: 770px; object-fit: cover;" ; flex-grow: 1;">
@@ -61,50 +70,21 @@
         <!-- Phần hình ảnh và liên kết bên phải -->
         <div class="right-images" style="display: flex; flex-direction: column; margin-left: 20px;">
             <a class="w3-button w3-yellow" asp-action="Index" asp-route-categoryId=4 style="display: inline-block; text-align: center; border-radius: 10px; border: 3px solid green;margin-bottom: 20px;">
-                <img src="~/Images/anh1.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Hình ảnh 1" style="width: 200px; margin-bottom: 10px; display: block;">
+                <img src="~/Images/anh1.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Sản phẩm mới" style="width: 200px; margin-bottom: 10px; display: block;">
                 <span style="display: block; font-size: 20px; font-weight: bold;">Sách Mới</span>
             </a>
             <a class="w3-button w3-red" asp-action="Index" asp-route-categoryId=2 style="display: inline-block; text-align: center; border-radius: 10px; border: 3px solid green;margin-bottom: 20px;">
-                <img src="~/Images/anh2.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Hình ảnh 2" style="width: 200px; margin-bottom: 10px; display: block;">
+                <img src="~/Images/anh2.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Sản phẩm bán chạy" style="width: 200px; margin-bottom: 10px; display: block;">
                 <span style="display: block; font-size: 20px; font-weight: bold;">Bán Chạy</span>
             </a>
             <a class="w3-button w3-blue" asp-action="Index" asp-route-categoryId=5 style="display: inline-block; text-align: center; border-radius: 10px; border: 3px solid green;">
-                <img src="~/Images/anh3.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Hình ảnh 3" style="width: 200px; margin-bottom: 10px; display: block;">
+                <img src="~/Images/anh3.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="Sản phẩm giảm giá" style="width: 200px; margin-bottom: 10px; display: block;">
                 <span style="display: block; font-size: 20px; font-weight: bold;">Giảm Giá</span>
             </a>
         </div>
 
 
     </div>
-
-   
-
-    <section class="py-5 overflow-hidden">
-        <div class="container-fluid">
-            
-            <div class="row">
-                <div class="col-md-12">
-                    @*  ---category--- *@
-                    <div class="category-carousel swiper">
-                        <div class="swiper-wrapper">
-                            <a class="w3-button w3-blue"><h2>Thể Loại</h2></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=1><h3>Cổ Tích</h3></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=2><h3>Kinh Dị</h3></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=3><h3>Trinh Thám</h3></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=4><h3>Anime</h3></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=5><h3>Thiếu Nhi</h3></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=6><h3>Nấu Ăn</h3></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=7><h3>Khoa Học</h3></a>
-                            <a class="w3-button w3-green" asp-action="Index" asp-route-categoryId=8><h3>Tâm Lí</h3></a>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <section class="py-5 overflow-hidden">
         <div class="container-fluid">
@@ -140,11 +120,11 @@
                                         <div class="card border-0 p-3 shadow  border-top border-5 rounded">
                                             @if (product.ProductImages != null && product.ProductImages.Count() > 0)
                                             {
-                                                <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                                <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" alt="Hình tác giả" />
                                             }
                                             else
                                             {
-                                                <img src="https://placehold.co/500x600/png" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" />
+                                                <img src="https://placehold.co/500x600/png" style="width: 100%; height: 200px; object-fit: cover;" class="card-img-top rounded" alt="Hình tác giả"/>
                                             }
                                             <div class="card-body pb-0">
                                                 <div class="pl-1">
@@ -176,10 +156,6 @@
                             <h3>Sản phẩm phổ biến nhất</h3>
 
                         </div>
-
-
-
-
                         <div class="row pb-3">
                             @foreach (var product in Model)
                             {
@@ -189,11 +165,11 @@
                                             <div class="card border-0 p-3 shadow  border-top border-5 rounded">
                                                 @if (product.ProductImages != null && product.ProductImages.Count() > 0)
                                                 {
-                                                    <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
+                                                    <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" alt="Hình sản phẩm" />
                                                 }
                                                 else
                                                 {
-                                                    <img src="https://placehold.co/500x600/png" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
+                                                    <img src="https://placehold.co/500x600/png" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" alt="Hình sản phẩm" />
                                                 }
                                                 <div class="card-body pb-0">
                                                     <div class="pl-1">
@@ -305,11 +281,11 @@
                                                 <div class="card border-0 p-3 shadow  border-top border-5 rounded">
                                                     @if (product.ProductImages != null && product.ProductImages.Count() > 0)
                                                     {
-                                                        <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
+                                                        <img src="@product.ProductImages.FirstOrDefault().ImageUrl" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" alt="Hình sản phẩm" />
                                                     }
                                                     else
                                                     {
-                                                        <img src="https://placehold.co/500x600/png" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" />
+                                                        <img src="https://placehold.co/500x600/png" style="width: 100%; height: 400px; object-fit: cover;" class="card-img-top rounded" alt="Hình sản phẩm" />
                                                     }
 
                                                     <div class="card-body pb-0">

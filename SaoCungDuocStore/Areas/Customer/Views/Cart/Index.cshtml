@@ -1,4 +1,14 @@
 ﻿@model ShoppingCartVM
+<head>
+    <title>Giỏ hàng của bạn</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 <style>
 img[alt="Delete"] {
     width: 40px; /* Adjust the size as needed */
@@ -6,16 +16,15 @@ img[alt="Delete"] {
     cursor: pointer;
 }
 </style>
+</head>
 <form method="post">
-
-    <br />
     <div class="card shadow border-0">
         <div class="card-header bg-secondary bg-gradient text-light ml-0 py-4">
             <div class="row px-4">
                 <div class="col-6">
-                    <h5 class="pt-2 text-white">
-                        Giỏ Hàng Hiện 
-                    </h5>
+                    <h1 class="pt-2 text-white">
+                        Giỏ Hàng Hiện Có
+                    </h1>
                 </div>
 
             </div>
@@ -28,18 +37,17 @@ img[alt="Delete"] {
                     <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-primary text-uppercase mb-5 btn-sm"><small>Tiếp Tục Mua Sắm</small></a>
                 </div>
                 <div class="col-md-10 offset-md-1">
-
                     @foreach (var item in Model.ShoppingCartList)
                     {
                         <div class="row border-bottom pb-3">
                             <div class="d-none d-lg-block col-lg-1 text-center py-2">
                                 @if (item.Product.ProductImages != null && item.Product.ProductImages.Count() > 0)
                                 {
-                                    <img src="@item.Product.ProductImages.FirstOrDefault().ImageUrl" class="card-img-top rounded w-100" />
+                                    <img src="@item.Product.ProductImages.FirstOrDefault().ImageUrl" class="card-img-top rounded w-100" alt="Hình sản phẩm" />
                                 }
                                 else
                                 {
-                                    <img src="https://placehold.co/500x600/png" class="card-img-top rounded w-100 " />
+                                    <img src="https://placehold.co/500x600/png" class="card-img-top rounded w-100 " alt="Hình sản phẩm" />
                                 }
                             </div>
                             <div class="col-12 col-lg-6 pt-md-3">
