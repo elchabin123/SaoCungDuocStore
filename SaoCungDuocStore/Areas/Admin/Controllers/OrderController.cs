@@ -22,11 +22,12 @@ namespace SaoCungDuocStore.Areas.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+        [Route("danh-sach-don-hang-da-dat")]
         public IActionResult Index()
         {
             return View();
         }
-
+        [Route("chi-tiet-don-hang-da-dat")]
         public IActionResult Details(int orderId)
         {
             OrderVM = new()

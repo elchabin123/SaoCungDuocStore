@@ -22,13 +22,14 @@ namespace SaoCungDuocStore.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
+        [Route("danh-sach-san-pham")]
         public IActionResult Index()
         {
             List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
 
             return View(objProductList);
         }
-
+        [Route("upsert-san-pham")]
         public IActionResult Upsert(int? id)
         {
             ProductVM productVM = new()

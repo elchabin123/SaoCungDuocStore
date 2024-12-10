@@ -16,12 +16,13 @@ namespace SaoCungDuocStore.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+        [Route("danh-muc-the-loai-sach-hien-co")]
         public IActionResult Index()
         {
             List<Category> objCategoryList = _unitOfWork.Category.GetAll().ToList();
             return View(objCategoryList);
         }
-
+        [Route("them-the-loai-moi")]
         public IActionResult Create()
         {
             return View();
@@ -44,7 +45,7 @@ namespace SaoCungDuocStore.Controllers
             return View();
 
         }
-
+        [Route("sua-the-loai-+{CategoryId}")]
         public IActionResult Edit(int? CategoryId)
         {
             if (CategoryId == null || CategoryId == 0)
@@ -75,7 +76,7 @@ namespace SaoCungDuocStore.Controllers
             return View();
 
         }
-
+        [Route("xoa-the-loai-+{CategoryId}")]
         public IActionResult Delete(int? CategoryId)
         {
             if (CategoryId == null || CategoryId == 0)

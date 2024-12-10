@@ -20,13 +20,14 @@ namespace SaoCungDuocStoreWeb.Areas.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+        [Route("danh-sach-cong-ty")]
         public IActionResult Index() 
         {
             List<Company> objCompanyList = _unitOfWork.Company.GetAll().ToList();
            
             return View(objCompanyList);
         }
-
+        [Route("upsert-cong-ty")]
         public IActionResult Upsert(int? id)
         {
            

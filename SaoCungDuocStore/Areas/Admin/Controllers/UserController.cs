@@ -26,6 +26,7 @@ namespace SaoCungDuocStore.Areas.Admin.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
         }
+        [Route("quan-li-nguoi-dung")]
         public IActionResult Index()
         {
             return View();

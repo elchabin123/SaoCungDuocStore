@@ -21,6 +21,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             _logger = logger;
             _unitOfWork = unitOfWork;
         }
+        [Route("san-pham-mang-ma+{productId}.html")]
         public IActionResult Details(int productId)
         {
 
@@ -70,6 +71,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
 
             return View(productList);
         }
+        [Route("the-loai-+{categoryId}")]
         public IActionResult Category(int? categoryId)
         {
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,ProductImages");

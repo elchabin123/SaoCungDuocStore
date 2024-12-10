@@ -20,6 +20,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+        [Route("San-pham-dang-cho-thanh-toan-!")]
         public IActionResult Index()
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;
@@ -39,6 +40,8 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             }
             return View(ShoppingCartVM);
         }
+
+        [Route("thong-tin-chi-tiet-don-hang")]
         public IActionResult Summary()
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;
