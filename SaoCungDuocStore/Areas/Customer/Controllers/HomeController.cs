@@ -67,6 +67,12 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
         {
 
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,ProductImages");
+
+            return View(productList);
+        }
+        public IActionResult Category(int? categoryId)
+        {
+            IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,ProductImages");
             if (categoryId.HasValue)
             {
                 // Lọc sản phẩm theo CategoryId
@@ -79,7 +85,6 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             }
             return View(productList);
         }
-
         public IActionResult Privacy()
         {
             return View();
