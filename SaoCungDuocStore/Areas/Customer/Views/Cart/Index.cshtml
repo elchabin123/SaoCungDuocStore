@@ -1,4 +1,13 @@
 ﻿@model ShoppingCartVM
+@{
+    @foreach (var item in Model.ShoppingCartList)
+    
+    {
+        ViewBag.Title = item.Product.Title;
+        ViewBag.Description = item.Product.Description;
+        ViewBag.ImageUrl = @item.Product.ProductImages.FirstOrDefault().ImageUrl;
+    }
+}
 <head>
     <title>Giỏ hàng của bạn</title>
     <meta charset="utf-8">

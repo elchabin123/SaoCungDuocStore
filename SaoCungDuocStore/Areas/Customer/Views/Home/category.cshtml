@@ -1,4 +1,13 @@
 ﻿@model IEnumerable<Product>
+@{
+    @foreach (var item in Model)
+
+    {
+        ViewBag.Title = item.Category.Name;
+        ViewBag.Description = item.Description;
+        ViewBag.ImageUrl = @item.ProductImages.FirstOrDefault().ImageUrl;
+    }
+}
 <head>
     <title>Trang chủ - Bookstore GI2</title>
     <meta charset="utf-8">
@@ -6,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="keywords" content="">
     <meta name="description" content="Danh mục sách như một cuốn nhật ký ghi lại hành trình đọc sách của bạn. BKhi bạn muốn tìm lại một cuốn sách đã đọc từ lâu, danh mục sách sẽ giúp bạn nhanh chóng tìm thấy.">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">

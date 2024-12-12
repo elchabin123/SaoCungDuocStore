@@ -1,12 +1,19 @@
 ﻿@model ShoppingCart
+@{
+    @foreach (var item in Model.Product.ProductImages)
+
+    {
+        ViewBag.Title = item.Product.Title;
+        ViewBag.Description = item.Product.Description;
+        ViewBag.ImageUrl = @item.Product.ProductImages.FirstOrDefault().ImageUrl;
+    }
+}
 <head>
-    <title>Chi tiết sản phẩm - Bookstore GI2</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="keywords" content="">
     <meta name="description" content="Thông tin chi tiết giúp bạn hiểu rõ hơn về nội dung, phong cách viết của tác giả, và liệu cuốn sách có phù hợp với sở thích của bạn hay không. Bạn có thể so sánh thông tin của nhiều cuốn sách khác nhau để đưa ra quyết định mua hàng tốt nhất.">
     </head>
 <form method="post">
