@@ -21,7 +21,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             _logger = logger;
             _unitOfWork = unitOfWork;
         }
-        [Route("san-pham-mang-ma-+{productId}")]
+        /*[Route("san-pham-mang-ma-+{productId}")]*/
         public IActionResult Details(int productId)
         {
 
