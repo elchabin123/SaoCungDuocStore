@@ -41,7 +41,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             return View(ShoppingCartVM);
         }
 
-        [Route("thong-tin-chi-tiet-don-hang")]
+        //[Route("thong-tin-chi-tiet-don-hang")]
         public IActionResult Summary()
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;

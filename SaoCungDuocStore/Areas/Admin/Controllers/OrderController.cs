@@ -27,8 +27,8 @@ namespace SaoCungDuocStore.Areas.Admin.Controllers
         {
             return View();
         }
-        [Route("chi-tiet-don-hang-da-dat")]
-        public IActionResult Details(int orderId)
+/*        [Route("chi-tiet-don-hang-da-dat")]
+*/        public IActionResult Details(int orderId)
         {
             OrderVM = new()
             {
