@@ -577,28 +577,9 @@
 
             </div>
         </div>
-          <div class="icon-container">
-                                 <?xml version="1.0" ?>
-                                 <svg class="share-button" onclick="shareOnFacebook()"height="45" viewBox="0 0 512 512" width="45" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M384,336a63.78,63.78,0,0,0-46.12,19.7l-148-83.27a63.85,63.85,0,0,0,0-32.86l148-83.27a63.8,63.8,0,1,0-15.73-27.87l-148,83.27a64,64,0,1,0,0,88.6l148,83.27A64,64,0,1,0,384,336Z"/>
-                                     </svg>
-                                    
-                                </div>
+          
     </footer>
-    <script>
-  function shareOnFacebook() {
-  const url = window.location.href; // lấy url hiện tại của store
-  const title = document.title; // lấy tiêu đề store
-  const description = "Khám phá thế giới sách phong phú chỉ với vài cú click chuột. Cửa hàng sách trực tuyến của chúng tôi mang đến cho bạn trải nghiệm mua sắm tiện lợi, nhanh chóng và thú vị."; // Replace with your description
-  const shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
-  window.open(shareLink, 'facebook-share-dialog', 'width=626,height=436');
-  const backButton = document.querySelector('#back-to-page');
-
-    // hiển thị sau khi click icon share
-    backButton.style.display = 'block';
-}
-
-</script>
+   
 
 @* Danh sách social*@ 
 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">

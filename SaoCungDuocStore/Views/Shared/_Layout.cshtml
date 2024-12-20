@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css" />
     <meta name="description" content="Đắm mình trong không gian sách tuyệt vời tại Bookstore của GI2! Chúng tôi cung cấp một kho tàng tri thức phong phú, với các thể loại sách đa dạng, từ những tác phẩm kinh điển đến những cuốn sách mới nhất. Dù bạn là người yêu thích văn học, đam mê khám phá khoa học hay đơn giản chỉ muốn tìm kiếm một cuốn sách hay để giải trí, chắc chắn bạn sẽ tìm thấy những cuốn sách phù hợp tại đây.">
+    
+    <style>
+    .icon-container {
+    position: absolute; /* Make icon container position absolute */
+    bottom: 40px;  /* Position icon 10px from the bottom */
+    right: 170px;   /* Position icon 10px from the right */
+    display: inline-block; /* Ensure icon stays on the same line */
+    vertical-align: middle;
+    margin-top: 10cm;
+        }
+        </style>
 </head>
 <body>
     <header>
@@ -82,11 +93,35 @@
         </main>
     </div>
 
-    @* <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - SaoCungDuocStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            
+                <div class="icon-container" >
+                    <?xml version="1.0" ?>
+                        <svg class="share-button" onclick = "shareOnFacebook()"height = "45" viewBox = "0 0 512 512" width = "45" xmlns = "http://www.w3.org/2000/svg" >
+                            <path d="M384,336a63.78,63.78,0,0,0-46.12,19.7l-148-83.27a63.85,63.85,0,0,0,0-32.86l148-83.27a63.8,63.8,0,1,0-15.73-27.87l-148,83.27a64,64,0,1,0,0,88.6l148,83.27A64,64,0,1,0,384,336Z" />
+                                </svg>
+
+                                
+                
+</div>
+            
         </div>
-    </footer> *@
+    </footer>
+    <script>
+                function shareOnFacebook() {
+                    const url = window.location.href; // lấy url hiện tại của store
+                    const title = document.title; // lấy tiêu đề store
+                    const description = "Khám phá thế giới sách phong phú chỉ với vài cú click chuột. Cửa hàng sách trực tuyến của chúng tôi mang đến cho bạn trải nghiệm mua sắm tiện lợi, nhanh chóng và thú vị."; // Replace with your description
+                    const shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+                    window.open(shareLink, 'facebook-share-dialog', 'width=626,height=436');
+                    const backButton = document.querySelector('#back-to-page');
+
+                    // hiển thị sau khi click icon share
+                    backButton.style.display = 'block';
+                }
+
+            </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script></script>
