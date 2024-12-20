@@ -61,6 +61,11 @@
   display: inline-block; /* Ensure icon stays on the same line */
   vertical-align: middle;
         }
+
+        .custom-button {
+            background-color: #cfe2ff;
+            color: black; /* Chọn màu chữ hợp lý để dễ đọc */
+        }
     </style>
 </head>
 <body>
@@ -68,7 +73,7 @@
     
 @foreach (var product in Model)
 {
-        <a class="w3-button w3-green" asp-action="category" asp-route-categoryId="@product.CategoryID"><h3>@product.Category.Name</h3></a>
+        <a class="w3-button custom-button" asp-action="category" asp-route-categoryId="@product.CategoryID"><h3>@product.Category.Name</h3></a>
 }
     
     <div class="main" style="margin-top: 10px; display: flex;">
