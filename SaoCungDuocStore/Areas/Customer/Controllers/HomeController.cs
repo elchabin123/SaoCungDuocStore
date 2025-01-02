@@ -21,7 +21,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             _logger = logger;
             _unitOfWork = unitOfWork;
         }
-        //[Route("san-pham-mang-ma-+{productId}")]
+        [HttpGet("san-pham-mang-ma-+{productId}")]
         public IActionResult Details(int productId)
         {
 
@@ -34,7 +34,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             
             return View(cart);
         }
-        [HttpPost]
+        [HttpPost("san-pham-mang-ma-+{productId}")]
         [Authorize]
         public IActionResult Details(ShoppingCart shoppingCart)
         {

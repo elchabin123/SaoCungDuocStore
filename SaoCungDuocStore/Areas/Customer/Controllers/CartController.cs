@@ -20,7 +20,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        [Route("San-pham-dang-cho-thanh-toan-!")]
+        [HttpGet("San-pham-dang-cho-thanh-toan-!")]
         public IActionResult Index()
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;
@@ -41,7 +41,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             return View(ShoppingCartVM);
         }
 
-        //[Route("thong-tin-chi-tiet-don-hang")]
+        [HttpGet("thong-tin-chi-tiet-don-hang")]
         public IActionResult Summary()
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;
@@ -66,7 +66,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             }
             return View(ShoppingCartVM);
         }
-        [HttpPost]
+        [HttpPost("thong-tin-chi-tiet-don-hang")]
         [ActionName("Summary")]
         public IActionResult SummaryPOST()
         {

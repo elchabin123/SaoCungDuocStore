@@ -20,14 +20,14 @@ namespace SaoCungDuocStoreWeb.Areas.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        [Route("danh-sach-cong-ty")]
+        [HttpGet("danh-sach-tat-ca-cong-ty")]
         public IActionResult Index() 
         {
             List<Company> objCompanyList = _unitOfWork.Company.GetAll().ToList();
            
             return View(objCompanyList);
         }
-        [Route("upsert-cong-ty")]
+        [HttpGet("upsert-cong-ty")]
         public IActionResult Upsert(int? id)
         {
            
@@ -44,7 +44,7 @@ namespace SaoCungDuocStoreWeb.Areas.Admin.Controllers
             }
             
         }
-        [HttpPost]
+        [HttpPost("upsert-cong-ty")]
         public IActionResult Upsert(Company CompanyObj)
         {
             if (ModelState.IsValid)
