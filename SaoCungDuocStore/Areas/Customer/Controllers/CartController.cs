@@ -6,6 +6,7 @@ using SaoCungDuocStore.Models.ViewModels;
 using SaoCungDuocStore.Utility;
 using System.Security.Claims;
 using Stripe.Checkout;
+using SaoCungDuocStore.Servicess;
 
 namespace SaoCungDuocStore.Areas.Customer.Controllers
 {
@@ -14,11 +15,14 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
     public class CartController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-		[BindProperty]
+        private readonly IVnpayService _vnPayservice;
+
+        [BindProperty]
 		public ShoppingCartVM ShoppingCartVM { get; set; }
-        public CartController(IUnitOfWork unitOfWork)
+        public CartController(IUnitOfWork unitOfWork, IVnpayService vnPayservice)
         {
             _unitOfWork = unitOfWork;
+            _vnPayservice = vnPayservice;
         }
         [HttpGet("San-pham-dang-cho-thanh-toan-!")]
         public IActionResult Index()
@@ -40,6 +44,7 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             }
             return View(ShoppingCartVM);
         }
+
 
         [HttpGet("thong-tin-chi-tiet-don-hang")]
         public IActionResult Summary()
@@ -66,9 +71,38 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             }
             return View(ShoppingCartVM);
         }
+
+
+        [Authorize]
+        public IActionResult PaymentFail()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult PaymentSuccess()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult PaymentCallBack()
+        {
+            var response = _vnPayservice.PaymentExcute(Request.Query);
+            if (response == null || response.VnPayResponseCode != "00")
+            {
+                TempData["Message"] = "Lỗi Thanh Toán VNPay";
+                return RedirectToAction("PaymentFail");
+            }
+
+            TempData["Message"] = "Thanh Toán VNPay Thành Công";
+            return RedirectToAction("PaymentSuccess");
+        }
+
         [HttpPost("thong-tin-chi-tiet-don-hang")]
         [ActionName("Summary")]
-        public IActionResult SummaryPOST()
+        public IActionResult SummaryPOST(string payment)
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
@@ -80,6 +114,40 @@ namespace SaoCungDuocStore.Areas.Customer.Controllers
             ShoppingCartVM.OrderHeader.ApplicationUserId = userId;
 
             ApplicationUser applicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
+
+
+            if (payment == "Thanh Toán VNPay")
+            {
+                ShoppingCartVM = new()
+                {
+                    ShoppingCartList = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId,
+                    includeProperties: "Product"),
+                    OrderHeader = new()
+                };
+                // Tính tổng giá trị đơn hàng
+                foreach (var cart in ShoppingCartVM.ShoppingCartList)
+                {
+                    cart.Price = GetPriceBasedOnQuantity(cart); // Tính giá theo số lượng
+                    ShoppingCartVM.OrderHeader.OrderTotal += (cart.Price * cart.Count); // Tổng giá trị tiền
+                }
+
+                var totalAmount = ShoppingCartVM.OrderHeader.OrderTotal;
+
+                // Tạo model cho VNPay
+                var vnPayModel = new VnPaymentRequestModel
+                {
+                    Amount = (long)(totalAmount /** 1000*/), // Nhân 1000 để thành đơn vị nhỏ nhất VNĐ
+                    CreatedDate = DateTime.Now,
+                    Description = "Thanh Toán Đơn Hàng",
+                    FullName = applicationUser.Name,
+                    OrderId = ShoppingCartVM.OrderHeader.Id.ToString(),
+                    ReturnUrl = Url.Action("PaymentCallBack", "Cart", new { area = "Customer" }, protocol: Request.Scheme)
+                };
+
+                // Tạo URL thanh toán với VNPay
+                var paymentUrl = _vnPayservice.CreatePaymentUrl(HttpContext, vnPayModel);
+                return Redirect(paymentUrl); // Chuyển hướng đến URL thanh toán
+            }
 
 
             foreach (var cart in ShoppingCartVM.ShoppingCartList)
